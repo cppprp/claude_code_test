@@ -32,6 +32,33 @@ The pickle file should contain a pandas DataFrame with the following columns:
 ### TIFF File
 A multiframe TIFF file containing the 3D image stack.
 
+## Quick Start (Heart Tissue Dataset)
+
+For the tomo (44B-T2)-256-cropped dataset, use the dedicated quick-start script:
+
+```bash
+# Interactive mode - choose visualization method
+python visualize_heart_tissue.py
+
+# Direct PyVista visualization
+python visualize_heart_tissue.py --pyvista
+
+# Direct Plotly visualization
+python visualize_heart_tissue.py --plotly
+```
+
+**Note**: Update the file paths at the top of `visualize_heart_tissue.py` if your files are in different locations.
+
+### Inspect Your Data
+
+To examine the structure of your pickle file before visualization:
+
+```bash
+python inspect_pickle_data.py '/Users/asvetlove/Downloads/tomo (44B-T2)-256-cropped_df.pkl'
+```
+
+This will show you all column names, data types, and help identify any issues.
+
 ## Usage
 
 ### Command Line
