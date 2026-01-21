@@ -1,6 +1,18 @@
 """
 Quick-start script for visualizing the heart tissue tensor analysis data.
 Configured for the tomo (44B-T2)-256-cropped dataset.
+
+Usage:
+    # Make sure you've run the setup script first:
+    #   ./setup_env.sh  (macOS/Linux)
+    #   .\setup_env.ps1  (Windows)
+
+    # Then activate the environment:
+    #   source .venv/bin/activate  (macOS/Linux)
+    #   .venv\Scripts\Activate.ps1  (Windows)
+
+    # Run the script:
+    python visualize_heart_tissue.py
 """
 
 from streamtube_visualization import (

@@ -1,0 +1,27 @@
+[project]
+name = "heart-tissue-tensor-visualization"
+version = "0.1.0"
+description = "Streamtube visualization for heart tissue tensor analysis with FA color mapping"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.20.0",
+    "pandas>=1.3.0",
+    "tifffile>=2021.0.0",
+    "pyvista>=0.37.0",
+    "plotly>=5.0.0",
+    "scikit-image>=0.18.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ipython",
+    "jupyter",
+]
+
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.uv]
+dev-dependencies = []

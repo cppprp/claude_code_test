@@ -15,9 +15,59 @@ And produces 3D streamtube visualizations where:
 
 ## Installation
 
-Install the required dependencies:
+This project uses `uv` for fast, reliable Python package management.
+
+### Quick Setup (Recommended)
+
+**On macOS/Linux:**
+```bash
+./setup_env.sh
+```
+
+**On Windows (PowerShell):**
+```powershell
+.\setup_env.ps1
+```
+
+This automated script will:
+1. Install `uv` if not already installed
+2. Create a virtual environment in `.venv/`
+3. Install all required dependencies
+
+### Manual Setup
+
+If you prefer manual setup:
+
+#### 1. Install uv (if not already installed)
 
 ```bash
+# On macOS and Linux
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# On Windows
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+#### 2. Create Virtual Environment and Install Dependencies
+
+```bash
+# Create virtual environment
+uv venv
+
+# Activate virtual environment
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Install all dependencies
+uv pip install -r requirements.txt
+```
+
+### Alternative: Using pip
+
+If you prefer using pip:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 

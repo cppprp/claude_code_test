@@ -149,7 +149,7 @@ def visualize_with_pyvista(points: np.ndarray, vectors: np.ndarray, fa_values: n
     try:
         import pyvista as pv
     except ImportError:
-        raise ImportError("PyVista not installed. Install with: pip install pyvista")
+        raise ImportError("PyVista not installed. Install with: uv pip install pyvista")
 
     # Create a PyVista plotter
     plotter = pv.Plotter()
@@ -239,7 +239,7 @@ def visualize_with_plotly(points: np.ndarray, vectors: np.ndarray, fa_values: np
     try:
         import plotly.graph_objects as go
     except ImportError:
-        raise ImportError("Plotly not installed. Install with: pip install plotly")
+        raise ImportError("Plotly not installed. Install with: uv pip install plotly")
 
     # Generate streamlines manually using simple Euler integration
     step_size = streamline_length / num_steps
@@ -346,7 +346,7 @@ def visualize_with_plotly_cone(points: np.ndarray, vectors: np.ndarray, fa_value
     try:
         import plotly.graph_objects as go
     except ImportError:
-        raise ImportError("Plotly not installed. Install with: pip install plotly")
+        raise ImportError("Plotly not installed. Install with: uv pip install plotly")
 
     # Subsample for performance
     indices = np.arange(0, len(points), subsample)
